@@ -4,7 +4,7 @@ public class Team {
 
   public Team(String name) {
     this.name = name;
-    this.position = new positions[11];
+    this.positions = new Player[11];
   }
 
   public String getName() {
@@ -15,29 +15,30 @@ public class Team {
 
   }
 
-  public int positionCount() {
-    int count = 0
+  public int playerCount() {
+    int count = 0;
     for (Player player : positions) {
       if (player != null){
         count++;
       }
     }
+    return count;
   }
 
   public void pickPlayer(Player player) {
     if (positionsTaken()) {
       return;
     }
-    int positionCount = positionCount();
-    belly[positionCount] = player;
+    int playerCount = playerCount();
+    positions[playerCount] = player;
   }
 
   public boolean positionsTaken() {
-    return positionCount() == positions.length;
+    return playerCount() == positions.length;
   }
 
   public void fullTime() {
-    for (i = 0; i < positions.length; i++) {
+    for (int i = 0; i < positions.length; i++) {
       positions[i] = null;
     }
   }
