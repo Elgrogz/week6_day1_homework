@@ -7,6 +7,10 @@ class Runner {
 
     liverpool.teamStatus(liverpool);
 
+    liverpool.pickPlayer(player);
+
+    liverpool.teamStatus(liverpool);
+
     liverpool.pickRestOfTeam(player);
 
     liverpool.teamStatus(liverpool);
@@ -16,3 +20,9 @@ class Runner {
     liverpool.teamStatus(liverpool);
   }
 }
+
+// I initially had the output lines in the runner like this:
+
+// System.out.println(liverpool.name() + " currently has " + liverpool.playerCount() + " in the matchday squad.");
+
+// but I've made a 'teamStatus' method that does it for me in the team class. Not sure if this is OK since in ruby its better not to output things from methods within the class?
