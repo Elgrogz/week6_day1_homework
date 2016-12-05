@@ -33,6 +33,17 @@ public class Team {
     positions[playerCount] = player;
   }
 
+  public void pickRestOfTeam(Player player) {
+    if (positionsTaken()) {
+      return;
+    }
+    for (int i = 0; i < positions.length; i++) {
+      if (positions[i] == null) {
+        positions[i] = player;
+      }
+    }
+  }
+
   public boolean positionsTaken() {
     return playerCount() == positions.length;
   }
@@ -41,5 +52,9 @@ public class Team {
     for (int i = 0; i < positions.length; i++) {
       positions[i] = null;
     }
+  }
+
+  public void teamStatus(Team team) {
+    System.out.println(team.getName() + " currently has " + team.playerCount() + " in the matchday squad.");
   }
 }

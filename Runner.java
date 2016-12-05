@@ -3,6 +3,16 @@ class Runner {
     Team liverpool = new Team("Liverpool F.C");
     Player player = new Player();
 
-    System.out.println(liverpool.getName() + " currently has " + liverpool.playerCount() + " in the matchday squad.");
+    liverpool.pickPlayer(player);
+
+    liverpool.teamStatus(liverpool);
+
+    liverpool.pickRestOfTeam(player);
+
+    liverpool.teamStatus(liverpool);
+    
+    liverpool.fullTime();
+
+    liverpool.teamStatus(liverpool);
   }
 }
