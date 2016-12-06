@@ -21,6 +21,20 @@ public class Team {
     squad.add(person);
   }
 
+  // public void pickRestOfTeam(Pickable person) {
+  //   if (teamFullCheck()) {
+  //     for (int i = 0; i < 11; i++) {
+  //       if (squad[i] == null) {
+  //         squad.add(person);
+  //       }
+  //     }
+  //   }
+  // }
+
+  public boolean teamFullCheck() {
+    return playerCount() > 11;
+  }
+
   public void fullTime() {
     squad.clear();
   }
