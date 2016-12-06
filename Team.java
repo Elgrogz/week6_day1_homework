@@ -2,11 +2,11 @@ import java.util.ArrayList;
 
 public class Team {
   private String name;
-  private ArrayList<Player> squad;
+  private ArrayList<Pickable> squad;
 
   public Team(String name) {
     this.name = name;
-    squad = new ArrayList<Player>();
+    this.squad = new ArrayList<Pickable>();
   }
 
   public String getName() {
@@ -17,8 +17,8 @@ public class Team {
     return squad.size();
   }
 
-  public void pickPlayer(Player player) {
-    squad.add(player);
+  public void pick(Pickable person) {
+    squad.add(person);
   }
 
   public void fullTime() {
