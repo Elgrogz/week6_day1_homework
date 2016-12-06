@@ -5,19 +5,15 @@ class Runner {
 
     liverpool.pickPlayer(player);
 
-    liverpool.teamStatus(liverpool);
+    System.out.println(liverpool.teamStatus(liverpool));
 
     liverpool.pickPlayer(player);
 
-    liverpool.teamStatus(liverpool);
-
-    liverpool.pickRestOfTeam(player);
-
-    liverpool.teamStatus(liverpool);
+    System.out.println(liverpool.teamStatus(liverpool));
     
     liverpool.fullTime();
 
-    liverpool.teamStatus(liverpool);
+    System.out.println(liverpool.teamStatus(liverpool));
   }
 }
 
