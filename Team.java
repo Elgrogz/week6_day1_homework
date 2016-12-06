@@ -21,6 +21,8 @@ public class Team {
     squad.add(person);
   }
 
+// not working, normal array is probably better in this situation as the number of array elements needed is known (11 spaces)
+
   // public void pickRestOfTeam(Pickable person) {
   //   if (teamFullCheck()) {
   //     for (int i = 0; i < 11; i++) {
